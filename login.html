@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Sign Up |Eazy-code Master</title>
+  <link rel="stylesheet" href="styles.css/home.css"> 
+</head>
+<body>
+
+  
+  <div class="auth-container" id="login-form">
+    <h2>Login to CodeMaster</h2>
+    <form>
+      <div class="form-group">
+        <label>Email or Username</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" required>
+      </div>
+      <div class="form-actions">
+        <button type="submit">Login</button>
+      </div>
+      <div class="toggle-link">
+        Don't have an account? <a onclick="showSignup()">Sign up</a>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="auth-container" id="signup-form" style="display:none;">
+    <h2>Create Account</h2>
+    <form>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" required>
+      </div>
+      <div class="form-actions">
+        <button type="submit">Sign Up</button>
+      </div>
+      <div class="toggle-link">
+        Already have an account? <a onclick="showLogin()">Login</a>
+      </div>
+    </form>
+  </div>
+
+  
+  <div class="back-home">
+    <a href="index.html">&larr; Back to Home</a>
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    function showSignup() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'block';
+    }
+
+    function showLogin() {
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('login-form').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
