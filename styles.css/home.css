@@ -7,7 +7,7 @@
 
 body{
   font-family:"Segoe UI",sans-serif ;
-  background: url("Images/back-ground.png.jpeg") no-repeat center center fixed ;
+  background: linear-gradient(135deg,#1a1a1a,#202020,#2c2c2c);
   color: #f1f1f1;
   background-size: cover ;
   position: relative;
@@ -48,6 +48,47 @@ nav a{
   border-radius: 5px;
   transition: background 0.3s;
 } 
+
+.dropdowm{
+  display: inline-block;
+  position: relative;
+}
+
+.dropdowm-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: inherit;
+  color: #333;
+} 
+
+.dropdowm-content{
+  display: none;
+  position: absolute;
+  background: color #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+} 
+
+.dropdowm-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration:none ;
+  display: block;
+  text-align: left;
+
+} 
+
+.dropdowm:hover.dropdowm-content{
+  display: block;
+} 
+
+.dropdowm-content a:hover {
+  background-color: #ddd;
+}
+
 
 nav a:hover{
   background-color: #333;
